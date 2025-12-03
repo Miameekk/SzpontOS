@@ -26,8 +26,8 @@
 - **CSS3** - nowoczesny design z gradientami i animacjami
   - CSS Variables (Custom Properties)
   - Flexbox & Grid
-  - Responsywność bez media queries (clamp, min, max)
-- **JavaScript (ES6+)** - interaktywność
+  - Responsywność (narazie jakas podstawowa)
+- **JavaScript** - interaktywność
 - **html2canvas** - konwersja HTML do obrazu
 - **Google Fonts** - czcionki Segoe UI
 
@@ -60,10 +60,10 @@ projekcik/
     ├── css/
     │   ├── style.css      # Style główne (navbar, sekcje)
     │   └── cards.css      # Style kart i modali
-    ├── img/
-    │   ├── favicon-32x32.png
-    │   ├── logo2-png.png
-    │   └── smajlandia polcie.png
+    ├── img/(obrazki)
+    │   
+    │  
+    │ 
     └── js/
         └── main.js        # Logika aplikacji
 ```
