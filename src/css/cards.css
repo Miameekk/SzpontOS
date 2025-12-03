@@ -14,30 +14,31 @@
     align-items: center;
     justify-content: flex-start;
     padding: clamp(8px, 1.5vw, 12px);
+    padding-top: 35px;
     z-index: 1000;
     overflow-y: auto;
 }
 
 #konfident-close {
-    position: fixed;
-    top: calc(8% - 2px);
-    right: calc(8% + 5px);
+    position: absolute;
+    top: 0;
+    right: 0;
     padding: 6px 9px;
-    border: 2px solid var(--textpolice);
-    border-radius: 0px 0px 0px 5px;
-    background-color: var(--bgsection);
-    color: var(--textpolice);
+    border: none;
+    border-bottom-left-radius: 5px;
+    background-color: var(--textpolice);
+    color: white;
     font-family: 'Poppins', sans-serif;
     font-weight: bold;
     font-size: 14px;
     cursor: pointer;
-    transition: background-color 0.3s, color 0.3s ease, border-color 0.3s ease;
+    transition: background-color 0.3s, color 0.3s ease;
     z-index: 1001;
 }
 
 #konfident-close:hover {
-    background-color: var(--textpolice);
-    color: var(--bgsection);
+    background-color: var(--textpolicehover);
+    color: white;
 }
 
 .konfident-card{
@@ -150,8 +151,8 @@
     margin-top: clamp(6px, 1vw, 10px);
     align-self: flex-end;
     display: flex;
-    right: 7%;
-    top: 60%;
+    right: 8%;
+    top: 50%;
     align-items: center;
     justify-content: center;
     font-size: clamp(8px, 1.2vw, 10px);
