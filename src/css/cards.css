@@ -1,9 +1,9 @@
 .konfident-container {
     visibility: hidden;
     position: fixed;
-    inset: 5%;
-    max-width: min(900px, 90vw);
-    max-height: min(500px, 85vh);
+    inset: 8%;
+    max-width: min(600px, 80vw);
+    max-height: min(450px, 75vh);
     margin: auto;
     background-color: var(--bgsection);
     border: 2px solid var(--textpolice);
@@ -12,26 +12,27 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    padding: clamp(10px, 2vw, 20px);
+    justify-content: flex-start;
+    padding: clamp(8px, 1.5vw, 12px);
     z-index: 1000;
-    overflow: hidden;
+    overflow-y: auto;
 }
 
 #konfident-close {
-    position: absolute;
-    top: -2px;
-    right: -4px;
-    padding: 8px 10px;
+    position: fixed;
+    top: calc(8% - 2px);
+    right: calc(8% + 5px);
+    padding: 6px 9px;
     border: 2px solid var(--textpolice);
     border-radius: 0px 0px 0px 5px;
-    background-color: transparent;
+    background-color: var(--bgsection);
     color: var(--textpolice);
     font-family: 'Poppins', sans-serif;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 14px;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s ease, border-color 0.3s ease;
+    z-index: 1001;
 }
 
 #konfident-close:hover {
@@ -40,24 +41,24 @@
 }
 
 .konfident-card{
-    width: min(800px, 100%);
+    width: min(500px, 100%);
     max-width: 100%;
     background: var(--bg);
     border: 2px solid var(--border);
-    padding: clamp(15px, 3vw, 20px);
+    padding: clamp(10px, 1.5vw, 12px);
     border-radius: 8px;
 }
 
 
 .konfident-container input {
     width: calc(100% - 10px);
-    padding: 6px;
+    padding: 5px;
     border: 1px solid var(--border);
     border-bottom: 1px solid var(--textpolice);
     border-radius: 4px 4px 0 0;
     background-color: var(--bgsection);
     color: var(--textdefault);
-    font-size: 14px;
+    font-size: 11px;
 }
 
 .konfident-container input[type="date"] {
@@ -79,30 +80,30 @@
 }
 
 .card-title{
-    font-size: clamp(18px, 4vw, 26px);
+    font-size: clamp(14px, 3vw, 18px);
     font-weight: bold;
     text-align: center;
-    margin-bottom: clamp(10px, 3vw, 20px);
+    margin-bottom: clamp(6px, 1.5vw, 12px);
 }
 
 
 .card-main{
     display: flex;
     flex-wrap: wrap;
-    gap: clamp(15px, 3vw, 20px);
+    gap: clamp(10px, 2vw, 15px);
     justify-content: center;
 }
 
 
 .photo-placeholder{
-    width: clamp(150px, 30vw, 200px);
-    height: clamp(180px, 35vw, 240px);
+    width: clamp(100px, 22vw, 140px);
+    height: clamp(130px, 28vw, 180px);
     flex-shrink: 0;
     border: 2px dashed #555;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: clamp(12px, 2vw, 14px);
+    font-size: clamp(9px, 1.3vw, 11px);
     color: #555;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -127,48 +128,48 @@
 
 .card-fields{ 
     flex: 1;
-    min-width: min(250px, 100%);
+    min-width: min(200px, 100%);
     display: flex;
     flex-direction: column;
-    gap: clamp(10px, 2vw, 14px);
+    gap: clamp(8px, 1.5vw, 10px);
 }
 
 .field span{
     font-weight: bold;
-    font-size: clamp(12px, 2vw, 14px);
+    font-size: clamp(10px, 1.5vw, 12px);
 }
 .field strong{
     margin-left: 4px;
-    font-size: clamp(12px, 2vw, 14px);
+    font-size: clamp(10px, 1.5vw, 12px);
 }
 
 .card-stamp{
     position: absolute;
-    width: clamp(80px, 15vw, 120px);
-    height: clamp(80px, 15vw, 120px);
-    margin-top: clamp(10px, 2vw, 20px);
+    width: clamp(50px, 10vw, 70px);
+    height: clamp(50px, 10vw, 70px);
+    margin-top: clamp(6px, 1vw, 10px);
     align-self: flex-end;
     display: flex;
     right: 7%;
     top: 60%;
     align-items: center;
     justify-content: center;
-    font-size: clamp(12px, 2vw, 14px);
+    font-size: clamp(8px, 1.2vw, 10px);
 }
 
 .card-footer-div{
-    margin-top: clamp(10px, 2vw, 20px);
-    font-size: clamp(12px, 2vw, 14px);
+    margin-top: clamp(8px, 1.5vw, 12px);
+    font-size: clamp(10px, 1.5vw, 12px);
 }
 
 .download-card-btn {
-    margin-top: 20px;
-    padding: 12px 30px;
+    margin-top: 12px;
+    padding: 8px 20px;
     background-color: var(--textpolice);
     color: white;
     border: none;
     border-radius: 8px;
-    font-size: 16px;
+    font-size: 12px;
     font-weight: bold;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -178,4 +179,199 @@
     background-color: var(--textpolicehover);
     transform: scale(1.05);
     box-shadow: 0 4px 15px rgba(58, 125, 255, 0.4);
+}
+
+/* Responsywność dla kart */
+@media (max-width: 1024px) {
+    .konfident-container {
+        inset: 3%;
+        max-width: min(850px, 92vw);
+        max-height: min(550px, 88vh);
+    }
+    
+    .konfident-card {
+        width: min(700px, 100%);
+    }
+    
+    .card-stamp {
+        right: 5%;
+        top: 62%;
+        width: clamp(70px, 12vw, 100px);
+        height: clamp(70px, 12vw, 100px);
+    }
+}
+
+@media (max-width: 768px) {
+    .konfident-container {
+        inset: 2%;
+        max-width: 95vw;
+        max-height: 90vh;
+        padding: 15px;
+        overflow-y: auto;
+    }
+    
+    #konfident-close {
+        padding: 6px 8px;
+        font-size: 14px;
+    }
+    
+    .konfident-card {
+        width: 100%;
+        padding: 15px;
+    }
+    
+    .card-title {
+        font-size: clamp(16px, 5vw, 22px);
+        margin-bottom: 15px;
+    }
+    
+    .card-main {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .photo-placeholder {
+        width: 100%;
+        max-width: 250px;
+        height: 280px;
+        margin: 0 auto;
+    }
+    
+    .card-fields {
+        width: 100%;
+        min-width: 100%;
+        gap: 12px;
+    }
+    
+    .field span,
+    .field strong {
+        font-size: clamp(13px, 3vw, 15px);
+    }
+    
+    .konfident-container input {
+        font-size: 13px;
+        padding: 8px;
+        width: 100%;
+    }
+    
+    .konfident-container #konfident-card-number {
+        width: 80px;
+    }
+    
+    .card-stamp {
+        position: static;
+        width: 100px;
+        height: 100px;
+        margin: 15px auto 0;
+    }
+    
+    .card-footer-div {
+        margin-top: 15px;
+        text-align: center;
+    }
+    
+    .download-card-btn {
+        width: 100%;
+        max-width: 300px;
+        padding: 12px 20px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .konfident-container {
+        inset: 1%;
+        max-width: 98vw;
+        max-height: 91vh;
+        padding: 10px;
+    }
+    
+    #konfident-close {
+        padding: 5px 7px;
+        font-size: 12px;
+        right: 1%;
+        top: 5%
+    }
+    
+    .konfident-card {
+        padding: 12px;
+    }
+    
+    .card-title {
+        font-size: clamp(14px, 5vw, 18px);
+        margin-bottom: 12px;
+    }
+    
+    .card-main {
+        gap: 12px;
+    }
+    
+    .photo-placeholder {
+        max-width: 200px;
+        height: 240px;
+        font-size: 11px;
+    }
+    
+    .card-fields {
+        gap: 10px;
+    }
+    
+    .field span,
+    .field strong {
+        font-size: 12px;
+    }
+    
+    .konfident-container input {
+        font-size: 12px;
+        padding: 6px;
+    }
+    
+    .konfident-container #konfident-card-number {
+        width: 70px;
+        font-size: 11px;
+    }
+    
+    .card-stamp {
+        width: 80px;
+        height: 80px;
+        margin: 12px auto 0;
+    }
+    
+    .card-footer-div {
+        margin-top: 12px;
+        font-size: 11px;
+    }
+    
+    .download-card-btn {
+        width: 100%;
+        padding: 10px 15px;
+        font-size: 14px;
+        margin-top: 15px;
+    }
+}
+
+@media (max-width: 360px) {
+    .konfident-container {
+        inset: 0.5%;
+    }
+    
+    .card-title {
+        font-size: 14px;
+    }
+    
+    .photo-placeholder {
+        max-width: 180px;
+        height: 220px;
+    }
+    
+    .field span,
+    .field strong,
+    .konfident-container input {
+        font-size: 11px;
+    }
+    
+    .card-stamp {
+        width: 70px;
+        height: 70px;
+    }
 }

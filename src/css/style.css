@@ -478,7 +478,7 @@ footer p span {
     }
     
     .nav-brand {
-        font-size: 1.1em;
+        display: none;
     }
     
     .nav-links a {
