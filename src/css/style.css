@@ -1,0 +1,319 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+    user-select: none;
+
+    --bgdefault: #1a1a1a;
+    --bgsection: #222222;
+    --textdefault: #FFFFFF;
+    --textdescription: #BFBFBF;
+    --textdescription2: #646464;
+    --textpolice: #3A7DFF;
+    --textpolicehover: #1E5EFF;
+    --textpolice2: #ff1f1f;
+    --cardBg: #2a2a2a;
+    --cardBorder: #3A7DFF;
+}
+
+body {
+    background-color: var(--bgdefault);
+    color: var(--textdefault);
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(26, 26, 26, 0.726);
+    backdrop-filter: blur(5px);
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    border-bottom: 2px solid var(--textpolice);
+    box-shadow: 0 4px 20px rgba(58, 125, 255, 0.2);
+}
+
+.nav-brand {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: var(--textpolice);
+    text-shadow: 0 0 10px rgba(58, 125, 255, 0.5);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 10px;
+}
+
+.nav-links a {
+    color: var(--textdefault);
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: all 0.3s ease;
+    padding: 8px 16px;
+    border-radius: 5px;
+}
+
+.nav-links a:hover {
+    color: var(--textpolice);
+    background-color: rgba(58, 125, 255, 0.1);
+    text-shadow: 0 0 8px rgba(58, 125, 255, 0.5);
+}
+
+@keyframes fadeIn {
+    from {
+        transform: translateY(5px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+header {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    position: relative;
+    animation: fadeIn 0.8s ease-in;
+    padding-top: 80px;
+}
+
+header h1 {
+    font-size: 10em;
+    font-weight: bold;
+    color: var(--textpolice);
+    text-shadow: var(--textpolice) 0 0 10px;
+}
+
+.create-section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 20px;
+    background-color: var(--bgdefault);
+}
+
+.create-section h2 {
+    font-size: 4em;
+    margin-bottom: 20px;
+    color: var(--textpolice);
+    text-shadow: 0 0 15px rgba(58, 125, 255, 0.5);
+}
+
+.section-description {
+    font-size: 1.4em;
+    color: var(--textdescription);
+    margin-bottom: 60px;
+}
+
+.cards-container {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1200px;
+}
+
+.card {
+    background-color: var(--cardBg);
+    border: 2px solid var(--cardBorder);
+    border-radius: 15px;
+    padding: 40px;
+    width: 350px;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(58, 125, 255, 0.1);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 30px rgba(58, 125, 255, 0.3);
+    border-color: var(--textpolicehover);
+}
+
+.card-icon {
+    font-size: 4em;
+    margin-bottom: 20px;
+}
+
+.card h3 {
+    font-size: 2em;
+    color: var(--textpolice);
+    margin-bottom: 20px;
+}
+
+.card p {
+    font-size: 1.1em;
+    color: var(--textdescription);
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.card-button {
+    background-color: var(--textpolice);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.1em;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+.card-button:hover {
+    background-color: var(--textpolicehover);
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(58, 125, 255, 0.4);
+}
+
+
+.about-section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 40px;
+    background-color: var(--bgsection);
+    text-align: center;
+}
+
+.about-section h2 {
+    font-size: 4em;
+    margin-bottom: 50px;
+    color: var(--textpolice);
+    text-shadow: 0 0 15px rgba(58, 125, 255, 0.5);
+}
+
+.about-content {
+    max-width: 1200px;
+}
+
+.intro-text {
+    font-size: 1.8em;
+    margin-bottom: 60px;
+    color: var(--textdefault);
+    line-height: 1.6;
+}
+
+.highlight {
+    color: var(--textpolice);
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(58, 125, 255, 0.5);
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+.feature-item {
+    background-color: var(--cardBg);
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid rgba(58, 125, 255, 0.3);
+    transition: all 0.3s ease;
+}
+
+.feature-item:hover {
+    border-color: var(--textpolice);
+    box-shadow: 0 4px 20px rgba(58, 125, 255, 0.2);
+    transform: translateY(-5px);
+}
+
+.feature-item h3 {
+    font-size: 1.6em;
+    margin-bottom: 15px;
+    color: var(--textpolice);
+}
+
+.feature-item p {
+    font-size: 1.1em;
+    color: var(--textdescription);
+    line-height: 1.6;
+}
+
+.disclaimer {
+    font-size: 1.2em;
+    color: var(--textpolice2);
+    background-color: rgba(255, 31, 31, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid var(--textpolice2);
+    margin-top: 40px;
+}
+
+@keyframes slideUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+footer {
+    text-align: center;
+    background-color: var(--bgsection);
+    color: var(--textdescription);
+    border-top: 2px solid var(--textpolice);
+    padding: 10px;
+}
+
+footer p {
+    margin: 10px 0;
+    font-size: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+}
+
+footer p span {
+    position: absolute;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    color: var(--textdescription2);
+    gap: 8px;
+    font-size: 0.8em;
+}
+
+.logo-link {
+    display: inline-flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.footer-logo {
+    height: 30px;
+    vertical-align: middle;
+    filter: brightness(0) invert(1);
+    opacity: 0.2;
+    transition: opacity 0.3s ease;
+    margin-left: -5px;
+}
+
+.logo-link:hover .footer-logo {
+    opacity: 1;
+}

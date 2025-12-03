@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="PL-pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="src/img/favicon-32x32.png" type="image/x-icon">
+    <title>Szpont OS</title>
+    <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="src/css/cards.css">
+</head>
+<body>
+    <div class="konfident-container">
+    <button id="konfident-close">X</button>
+        <div class="konfident-card" id="konfident-card-export">
+        <div class="card-header-div">
+        <div class="card-title">KARTA STAŁEGO KONFIDENTA</div>
+        </div>
+
+
+        <div class="card-main">
+        <div class="photo-placeholder" id="photo-upload-area">
+        <input type="file" id="photo-input" accept="image/*" style="display: none;">
+        <img id="uploaded-photo" style="display: none; width: 100%; height: 100%; object-fit: cover;">
+        <span id="photo-placeholder-text">Kliknij aby dodać zdjęcie</span>
+        </div>
+
+
+        <div class="card-fields">
+        <div class="field"><span>Imię:</span> <input type="text" id="konfident-imie" placeholder="Jan"></div>
+        <div class="field"><span>Nazwisko:</span> <input type="text" id="konfident-nazwisko" placeholder="Nowak"></div>
+        <div class="field"><span>Wydano:</span>
+        <input type="text" id="komenda" placeholder="Komenda Policji w Smajlandii" value="Komenda Policji w Smajlandii" disabled style="border: none;">
+        </div>
+        <div class="field"><span>Data ważności:</span> <input type="text" id="data" placeholder="Dożywotnio" value="Dożywotnio" disabled style="border: none;"></div>
+        </div>
+        <img src="src/img/smajlandia polcie.png" alt="pieczatka" class="card-stamp">
+        </div>
+        <div class="card-footer-div">
+        <small>Numer karty: <input type="text" placeholder="#0001" maxlength="5" id="konfident-card-number" value="#0001"></small>
+        </div>
+        </div>
+        <button id="download-card" class="download-card-btn">Pobierz jako obrazek</button>
+    </div>
+    <nav class="navbar">
+        <div class="nav-brand">Szpont OS</div>
+        <ul class="nav-links">
+            <li><a href="#header">Główna</a></li>
+            <li><a href="#create">Kreator</a></li>
+            <li><a href="#about">O Systemie</a></li>
+        </ul>
+    </nav>
+
+    <header id="header">
+        <h1>Szpont OS</h1>
+    </header>
+
+    <section id="create" class="create-section">
+        <h2>Generuj Dokumenty</h2>
+        <p class="section-description">Wybierz co chcesz wygenerować</p>
+        <div class="cards-container">
+            <div class="card">
+                <div class="card-icon">📄</div>
+                <h3>Mandacik</h3>
+                <p>Wygeneruj oficjalny mandacik za Nadmierną Piękność. Idealne narzędzie do bekowej kontroli społeczeństwa.</p>
+                <button class="card-button" id="mandat-open">Generuj Mandat</button>
+            </div>
+            <div class="card">
+                <div class="card-icon">🎫</div>
+                <h3>Karta Konfidenta</h3>
+                <p>Stwórz profesjonalną Kartę Stałego Konfidenta. Dokumentacja pełnego prawa do szpiegowania.</p>
+                <button class="card-button" id="konfident-open">Generuj Kartę</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about-section">
+        <h2>O Systemie</h2>
+        <div class="about-content">
+            <p class="intro-text">Witaj w <span class="highlight">Szpont OS</span> - najbardziej zaawansowanym systemie bekowej kontroli społeczeństwa!</p>
+            
+            <div class="features">
+                <div class="feature-item">
+                    <h3>🚔 Profesjonalne Mandaty</h3>
+                    <p>Wystawiaj mandaciki za Nadmierną Piękność i inne ważne wykroczenia. System automatycznie dodaje pieczątki i podpisy.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>🕵️ Karty Konfidenta</h3>
+                    <p>Generuj oficjalne Karty Stałego Konfidenta z pełnym prawem do szpiegowania sąsiadów i kontroli społecznej.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>⚡ Błyskawiczne Generowanie</h3>
+                    <p>Jeden klik i gotowe! Nie musisz się znać na grafice - system zrobi wszystko za Ciebie.</p>
+                </div>
+            </div>
+
+            <p class="disclaimer">⚠️ Uwaga: Wszystkie dokumenty są wyłącznie do celów rozrywkowych i bekowania. Szpont OS nie ponosi odpowiedzialności za niewłaściwe użycie systemu.</p>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2024 Szpont OS. Wszelkie prawa zastrzeżone. <span>Powered by 
+            <a href="https://github.com/Miameekk" target="_blank" class="logo-link">
+                <img src="src/img/logo2-png.png" alt="m-code logo" class="footer-logo">
+            </a>
+            </span>
+        </p>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="src/js/main.js"></script>
+</body>
+</html>
